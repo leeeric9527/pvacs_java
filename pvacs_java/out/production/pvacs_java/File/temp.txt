@@ -1,0 +1,14 @@
+phmk[s.batchSeq[i]][s.batchSeq[i+1]]=(1-Parameters.PG)*phmk[s.batchSeq[i]][s.batchSeq[i+1]]+Parameters.PG*detaPhmk[s.batchSeq[i]][s.batchSeq[i+1]];
+                phepc[s.batchSeq[i]][s.batchSeq[i+1]]=(1-Parameters.PG)*phepc[s.batchSeq[i]][s.batchSeq[i+1]]+Parameters.PG*detaPhepc[s.batchSeq[i]][s.batchSeq[i+1]];
+                if (phmk[s.batchSeq[i]][s.batchSeq[i+1]]<Parameters.MINTAO){
+                    phmk[s.batchSeq[i]][s.batchSeq[i+1]]=Parameters.MINTAO;
+                }
+                if (phmk[s.batchSeq[i]][s.batchSeq[i+1]]>Parameters.MAXTAO){
+                    phmk[s.batchSeq[i]][s.batchSeq[i+1]]=Parameters.MAXTAO;
+                }
+                if (phepc[s.batchSeq[i]][s.batchSeq[i+1]]<Parameters.MINTAO){
+                    phepc[s.batchSeq[i]][s.batchSeq[i+1]]=Parameters.MINTAO;
+                }
+                if (phepc[s.batchSeq[i]][s.batchSeq[i+1]]>Parameters.MAXTAO){
+                    phepc[s.batchSeq[i]][s.batchSeq[i+1]]=Parameters.MAXTAO;
+                }
